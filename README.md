@@ -39,7 +39,7 @@ to change the settings of both aria2 and nginx.
 
 * `80`: Visit the webui, aria2 rpc and downloaded data
 
-### Volums
+### Volumes
 
 * `/data`: the path where downloaded files are saved.
 * `/app/conf`: the path of aria2 configuration files. The template file can be found in the `conf` directory in this repo.

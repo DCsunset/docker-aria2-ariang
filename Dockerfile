@@ -17,5 +17,5 @@ EXPOSE 80
 
 WORKDIR /app
 
-VOLUME ["/app/conf", "/data"]
+VOLUME ["/app/conf", "/data", "/etc/nginx/conf.d/default.conf"]
 CMD ["/app/start.sh"]

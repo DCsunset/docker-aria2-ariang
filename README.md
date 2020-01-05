@@ -6,23 +6,51 @@ Dockerized aria2 with aria-ng.
 
 ## Usage
 
+Simple usage:
+
 ```
 docker run -d \
-	-p <port>:80 -e RPC_SECRET=xxx \
+	-e RPC_SECRET=xxx \
+	-p <port>:80 \
 	-v /DOWNLOADS:/data \
-	-v /CONFIG:/app/conf \
 	dcsunset/aria2-ariang
 ```
 
-The `/data` volume is the path where files are saved.
-The `/app/conf` is the aria2 configuration path.
+Full-featured usage:
+
+```
+docker run -d \
+	-e RPC_SECRET=xxx \
+	-p <port>:80 \
+	-v /DOWNLOADS:/data \
+	-v /CONFIG:/app/conf \
+	-v /NGINX_CONFIG:/etc/nginx/conf.d/default.conf \
+	dcsunset/aria2-ariang
+```
 
 The aria2 JSON-RPC is available at `http://<server-ip>:<port>/jsonrpc`.
 
 The downloaded files can be viewed at `http://<server-ip>:<port>/data/`.
+
+Customization can be easily done by using the volume
+to change the settings of both aria2 and nginx.
+
+### Ports
+
+* `80`: Visit the webui, aria2 rpc and downloaded data
+
+### Volums
+
+* `/data`: the path where downloaded files are saved.
+* `/app/conf`: the path of aria2 configuration files. The template file can be found in the `conf` directory in this repo.
+* `/etc/nginx/conf.d/default.conf`: the configuration of nginx. The template file can be found in the `conf` directory in this repo.
 
 ## Build
 
 ```
 docker build . -t dcsunset/aria2-ariang
 ```
+
+# License
+
+MIT License

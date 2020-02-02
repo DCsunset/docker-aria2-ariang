@@ -1,6 +1,7 @@
 # Docker Aria2-AriaNG
 
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/dcsunset/aria2-ariang)](https://hub.docker.com/r/dcsunset/aria2-ariang)
+[![Docker Image Size](https://badgen.net/docker/size/dcsunset/aria2-ariang)](https://hub.docker.com/r/dcsunset/aria2-ariang)
 
 Dockerized aria2 with aria-ng.
 

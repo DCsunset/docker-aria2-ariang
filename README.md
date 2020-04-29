@@ -31,14 +31,12 @@ docker run -d \
 
 The aria2 JSON-RPC is available at `http://<server-ip>:<port>/jsonrpc`.
 
-The downloaded files can be viewed at `http://<server-ip>:<port>/data/`.
-
 Customization can be easily done by using the volume
 to change the settings of both aria2 and nginx.
 
 ### Ports
 
-* `80`: Visit the webui, aria2 rpc and downloaded data
+* `80`: Visit the webui and aria2 rpc
 
 ### Volumes
 

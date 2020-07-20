@@ -13,7 +13,7 @@ Simple usage:
 docker run -d \
 	-e RPC_SECRET=xxx \
 	-p <port>:80 \
-	-v /DOWNLOADS:/data \
+	-v <download_dir>:/data \
 	dcsunset/aria2-ariang
 ```
 
@@ -23,9 +23,9 @@ Full-featured usage:
 docker run -d \
 	-e RPC_SECRET=xxx \
 	-p <port>:80 \
-	-v /DOWNLOADS:/data \
-	-v /CONFIG:/app/conf \
-	-v /NGINX_CONFIG:/etc/nginx/conf.d/default.conf \
+	-v <download_dir>:/data \
+	-v <config_dir>:/app/conf \
+	-v <nginx_config>:/etc/nginx/conf.d/default.conf \
 	dcsunset/aria2-ariang
 ```
 

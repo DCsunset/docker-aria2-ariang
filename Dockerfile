@@ -4,7 +4,7 @@ LABEL MAINTAINER="DCsunset"
 
 RUN apk add --no-cache aria2 ca-certificates nginx \
 	&& mkdir -p /app/conf /app/aria-ng /downloads /run/nginx \
-	&& version="1.1.6" \
+	&& version="1.1.7" \
 	&& wget https://github.com/mayswind/AriaNg/releases/download/${version}/AriaNg-${version}.zip \
 	&& unzip AriaNg-${version}.zip -d /app/aria-ng \
 	&& rm -rf AriaNg-${version}.zip
